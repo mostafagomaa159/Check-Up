@@ -30,8 +30,8 @@ class Home extends StatelessWidget {
             )),
         child: ListView(
 
-          children: [
-            const   Text(
+          children: const [
+               Text(
               "  Check Up \n services, Here you can find \n your Supporter AI doctor \n to pre check up for your Eye illness,\n By Questions that Analyse the Current Ill,\n And Recommend most needed X-Ray\n to detect the ill perfectly,\n After Uploading X-ray image\n The AI Model will detect the ill\n and give you suitable Advice for your Situation ",
               style: TextStyle( fontWeight: FontWeight.bold, fontSize: 25, color: AppColor.black),
             ),

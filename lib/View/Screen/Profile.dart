@@ -4,7 +4,6 @@ import 'package:checkup/Core/Constant/Color.dart';
 import 'package:checkup/View/Widget/Auth/logoauth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../../Controller/auth/userInfo_controller.dart';
 import '../Widget/Auth/customdrawer.dart';
 

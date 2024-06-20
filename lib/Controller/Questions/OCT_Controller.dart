@@ -14,12 +14,13 @@ import 'package:image_picker/image_picker.dart';
 abstract class OCT_Controller extends GetxController {
   PostDataOCT();
   getImageGallary();
+  getImageCamera();
 }
 
 class OctControllerImp extends OCT_Controller {
   late String filename;
   late Image image;
-  StatusRequest? statusRequest;
+  late StatusRequest? statusRequest;
   OctData octData = OctData(Get.find());
   File? file;
   List data = [];
@@ -29,13 +30,20 @@ class OctControllerImp extends OCT_Controller {
     final PickedFile? imageGallary =
         await picker.getImage(source: ImageSource.gallery);
     file = File(imageGallary!.path);
-
+    update();
+  }
+  getImageCamera() async {
+    final ImagePicker picker = ImagePicker();
+    final PickedFile? imageGallary =
+    await picker.getImage(source: ImageSource.camera);
+    file = File(imageGallary!.path);
     update();
   }
 
   @override
   PostDataOCT() async {
     statusRequest = StatusRequest.loading;
+    update();
     String t = SharedPrefrenceHelper.getData(key: 't');
     var headers = {
       'Accept': 'application/json',

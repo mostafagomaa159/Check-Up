@@ -1,5 +1,3 @@
-
-
 import 'package:checkup/Core/Constant/Color.dart';
 import 'package:checkup/Core/Constant/ImageAsset.dart';
 import 'package:flutter/material.dart';
